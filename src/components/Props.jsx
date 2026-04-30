@@ -1,3 +1,5 @@
+import styles from '../styles/Props.module.css'; {/*Colocamos el estilo para que el componente Pefil se vea mucho mas lindo */}
+
 export function ButtonProps({ text, color }) {
   return (
     <button
@@ -12,41 +14,34 @@ export function ButtonProps({ text, color }) {
   );
 }
 
-export function PropChildren({
-    titulo, children
-}) {
-    return (
-        <div className="tarjeta">
-            <h3>{titulo}</h3>
-            <div className="contenido">
-                {children}
-            </div>
-        </div>
-    );
+export function PropChildren({ titulo, children }) {
+  return (
+    <div className="tarjeta">
+      <h3>{titulo}</h3>
+      <div>{children}</div>
+    </div>
+  );
 }
-
 
 function Avatar({ url, nombre }) {
-    return (
-        <img src={url} alt={nombre} 
-    className="avatar" />
-    );}
-
-
-function Info({ nombre, edad }) {
-    return (
-        <div>
-            <h4>Nombre: {nombre}</h4>
-            <p>Edad: {edad}</p>
-        </div>
-    );
+  return <img src={url} alt={nombre} width="100" />;
 }
 
-export function perfil({ usuario }) {
-    return (
-        <div className="perfil">
-            <Avatar url={usuario.avatar} nombre={usuario.nombre} />
-            <Info nombre={usuario.nombre} edad={usuario.edad} />
-        </div>
-    );
+function Info({ nombre, edad }) {
+  return (
+    <div>
+      <h4>{nombre}</h4>
+      <p>Edad: {edad}</p>
+    </div>
+  );
+}
+
+export function Perfil({ usuario }) {
+  return (
+    <div className="perfil">
+      <Avatar url={usuario.avatar} nombre={usuario.nombre} />
+      <Info nombre={usuario.nombre} edad={usuario.edad} />
+      <button className={styles.mybutton}>perfil</button>  {/*Aqui esta el estilo que acabamos de realizar*/}
+    </div>
+  );
 }

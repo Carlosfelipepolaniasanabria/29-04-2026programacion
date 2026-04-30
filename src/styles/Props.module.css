@@ -1,0 +1,8 @@
+.mybutton {  /*Este es el estilo para el perfil en Props.jsx*/
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: blueviolet;
+    color: white;
+}
