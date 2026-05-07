@@ -29,7 +29,7 @@ function Avatar({ url, nombre }) {
 
 function Info({ nombre, edad }) {
   return (
-    <div>
+    <div className={styles.perfilInfo}>
       <h4>{nombre}</h4>
       <p>Edad: {edad}</p>
     </div>

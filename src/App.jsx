@@ -1,5 +1,7 @@
 
 import React from "react";
+import { Contador, Formulario, Formulario_Objeto } from "./components/hook.jsx"; /*Importamos el componente contador que se encuentra en use_State.jsx*/
+import { Timer, CounterwithVariable, ListaPost } from "./components/Use_effect.jsx"; /*Importamos el componente Timer que se encuentra en Use_effect.jsx*/
 import { ButtonProps, PropChildren, Perfil } from "./components/Props";
 
 class Usuario {
@@ -32,6 +34,14 @@ function App() {
       puede ver arriba hay una parte que llame a la función perfil y si entras veras a perfil que se compone de otras dos funciones son privadas porque no estan siendo exportadas
       osea que se utilizan en la misma Props.jsx mientras que las que se exportan son funciones publicas que se pueden utilizar en otros jsx como por ejemplo perfil que lo estamos
       utilizando en App.jsx */}
+
+
+      <Contador /> {/*Aqui estamos utilizando el componente contador que se encuentra en use_State.jsx*/} 
+      <Formulario />
+      <Formulario_Objeto />
+      <Timer />
+      <CounterwithVariable />
+      <ListaPost /> 
     </>
   );
 }
